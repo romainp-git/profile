@@ -156,7 +156,7 @@ p{
 
 #suggestions button{
   border-radius: 30px;
-  padding: 5px 15px;
+  padding: 2px 15px;
 }
 
 /* IMAGES */
@@ -195,6 +195,7 @@ p{
   align-items: flex-start;
   width: 100%;
   padding: 10px;
+  cursor: pointer;
   border-top: 1px solid lightgray;
   box-sizing: border-box;
   background-color: white;
@@ -260,18 +261,18 @@ li a:hover{
   color: darkred;
 }
 
-
 /* BUTTONS */
 
 button{
   background-color: white;
   border: 1px solid darkred;
+  font-family: "Oswald", sans-serif;
   color: darkred;
   padding: 10px 15px;
   cursor: pointer;
   text-align: center;
   font-size: 16px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
