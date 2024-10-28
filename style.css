@@ -8,6 +8,12 @@ body{
   padding:0;
 }
 
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 h1, h2, h3, p{
   margin: 0;
   padding:0;
@@ -23,12 +29,31 @@ p{
 /* CONTAINER */
 
 .container{
-  width: 50vw;
-  background-color: white;
+  display: flex;
+  justify-content: center;
+  max-width: 1000px;
   margin: 0 auto;
+}
+
+.container-left {
+  margin: 0 10px;
+  width: 70vw;
   border-left: 1px solid lightgray;
   border-right: 1px solid lightgray;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  border-bottom: 1px solid lightgray;
+}
+
+.container-right {
+  margin: 0 10px;
+  width: 30vw;
+  background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,6 +109,56 @@ p{
   align-self: flex-end;
 }
 
+/* SUGGESTIONS */
+
+#suggestions {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+
+#suggestions h2{
+  padding: 10px 20px;
+}
+
+#suggestions li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: black;
+  padding: 5px 15px;
+  line-height: 1.3;
+  transition: background-color 0.5s ease;
+}
+
+#suggestions li:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+#suggestions img{
+  width: 40px;
+  height: 40px;
+}
+
+#suggestions h2{
+  color:black;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+#suggestions p{
+  margin: 0;
+}
+
+#suggestions button{
+  border-radius: 30px;
+  padding: 5px 15px;
+}
+
 /* IMAGES */
 
 .img-circle{
@@ -101,14 +176,18 @@ p{
   margin: 0;
 }
 
+.name{
+  color:black;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+}
+
 /* CARDS */
 
 .content {
   width: 100%;
-}
-
-.card:first-child {
-  border-top: 1px solid lightgray;
 }
 
 .card {
@@ -116,7 +195,7 @@ p{
   align-items: flex-start;
   width: 100%;
   padding: 10px;
-  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
   box-sizing: border-box;
   background-color: white;
   transition: background-color 0.5s ease;
@@ -165,9 +244,6 @@ footer ul{
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 footer li{
@@ -206,22 +282,25 @@ button:hover{
 
 /* MEDIA QUERIES */
 
-@media (max-width: 960px) {
+@media (max-width: 800px) {
   .container {
-    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
   }
-}
-
-@media (max-width: 720px) {
-  .container {
-    width: 500px;
+  .container-left {
+    width: 95vw;
+    box-sizing: border-box;
+  }
+  .container-right {
+    width: 95vw;
+    box-sizing: border-box;
   }
 }
 
 @media (max-width: 540px) {
-  .container {
-    width: 300px;
-  }
   button{
     position: relative !important;
     align-self: flex-start !important;
