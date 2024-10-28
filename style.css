@@ -2,73 +2,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 body{
-  background-color:darkred;
+  background-color: rgba(0, 0, 0, 0);
   font-family: "Oswald", sans-serif;
+  margin:0;
+  padding:0;
+}
+
+h1, h2, h3, p{
+  margin: 0;
+  padding:0;
+}
+
+p{
+  color:black;
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+  margin: 10px 0;
 }
 
 /* CONTAINER */
 
 .container{
-  width: 800px;
+  width: 50vw;
+  background-color: white;
   margin: 0 auto;
-  text-align: center;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.card{
-  background-color:black;
+/* HERO-BANNER */
+
+.hero-banner {
   width: 100%;
-  margin: 10px auto;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* INFORMATIONS */
+
+.informations {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
   box-sizing: border-box;
+  color: black;
+}
+
+.informations img{
+  margin-top: -100px;
+}
+
+.informations h2{
+  color:black;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+.informations span{
+  margin-right: 15px;
+  font-family: "Oswald", sans-serif;
+  color:gray;
+}
+
+.informations i{
+  margin-right: 5px;
+}
+
+.informations button{
+  position:absolute;
+  align-self: flex-end;
 }
 
 /* IMAGES */
 
-img{
+.img-circle{
   width: 150px;
   height: 150px;
+  border:3px solid white;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* TITLES */
-
-h1, h2, h3{
-  font-weight: bold;
-  color:white;
+.username{
+  color:gray;
+  font-size: 14px;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
 }
 
-/* PARAGRAPHS */
+/* CARDS */
 
-p{
-  color:white;
-  font-size: 14px;
-  font-family: "Playfair Display", serif;
+.content {
+  width: 100%;
+}
+
+.card:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1px solid lightgray;
+  box-sizing: border-box;
+  background-color: white;
+  transition: background-color 0.5s ease;
+}
+
+.card:hover {
+  background-color: rgb(234, 234, 234);
+}
+
+.card div {
+  margin: 0 10px;
+}
+
+.card-content {
+  width: 100%;
+}
+
+.card-content iframe{
+  margin-top:10px;
+  max-width: 660px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card img {
+  width: 40px;
+  height: 40px;
+  border: none;
 }
 
 /* LISTS */
 
-.list-inline{
+footer {
+  padding: 15px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer ul{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
   list-style: none;
-  padding-left: 0px;
+  margin: 0;
+  padding: 0;
 }
 
-.list-inline li{
-  display: inline;
-  padding: 10px;
-}
-
-/* LINKS */
-
-a{
-  text-decoration:none;
-  color:darkred;
+footer li{
+  margin: 0 10px;
 }
 
 li a{
-  color:white;
+  text-decoration:none;
+  color:gray;
   transition: 0.5s ease;
 }
 
@@ -76,23 +184,24 @@ li a:hover{
   color: darkred;
 }
 
+
 /* BUTTONS */
 
 button{
-  background-color: darkred;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  background-color: white;
+  border: 1px solid darkred;
+  color: darkred;
+  padding: 10px 15px;
   cursor: pointer;
   text-align: center;
   font-size: 16px;
   border-radius: 5px;
-  margin: 5px 0;
-  transition: 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 button:hover{
-  background-color: red;
+  background-color: darkred;
+  color: white;
 }
 
 /* MEDIA QUERIES */
@@ -112,5 +221,10 @@ button:hover{
 @media (max-width: 540px) {
   .container {
     width: 300px;
+  }
+  button{
+    position: relative !important;
+    align-self: flex-start !important;
+    margin: 10px 0;
   }
 }

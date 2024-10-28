@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+  background-color:darkred;
+  font-family: "Oswald", sans-serif;
+}
+
+/* CONTAINER */
+
+.container{
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card{
+  background-color:black;
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+/* IMAGES */
+
+img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* TITLES */
+
+h1, h2, h3{
+  font-weight: bold;
+  color:white;
+}
+
+/* PARAGRAPHS */
+
+p{
+  color:white;
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+}
+
+/* LISTS */
+
+.list-inline{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list-inline li{
+  display: inline;
+  padding: 10px;
+}
+
+/* LINKS */
+
+a{
+  text-decoration:none;
+  color:darkred;
+}
+
+li a{
+  color:white;
+  transition: 0.5s ease;
+}
+
+li a:hover{
+  color: darkred;
+}
+
+/* BUTTONS */
+
+button{
+  background-color: darkred;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: 0.5s ease;
+}
+
+button:hover{
+  background-color: red;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 960px) {
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    width: 300px;
+  }
+}
